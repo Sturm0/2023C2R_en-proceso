@@ -26,7 +26,7 @@ void string_proc_list_add_node(string_proc_list* list, uint8_t type, char* hash)
 	}
 	
 	list->last = nuevo;
-	
+	if (list->first == NULL) list->first = nuevo;
 }
 
 char* str_concat(char* a, char* b);
